@@ -7,8 +7,28 @@
 -- @lc code=start
 # Please write a DELETE statement and DO NOT write a SELECT statement.
 # Write your MySQL query statement below
+# Please write a DELETE statement and DO NOT write a SELECT statement.
+# Write your MySQL query statement below
+
+/*
+INPUT
+-----
+person(id, email)
+
+
+OUTPUT
+------
+delete duplicate emails
+
+
+CONSTRAINS
+-----------
+
+
+*/
+
 delete A from Person A, Person B
-where A.id > B.id && A.email = B.email;
+where A.email = B.email && A.id > B.id
 
 -- @lc code=end
 
