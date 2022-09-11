@@ -1,4 +1,6 @@
 #!/bin/bash
+# ./hello.sh        Take_input
+# ./hello.sh git    Take_input and call_github
 
 varname=""
 
@@ -26,6 +28,9 @@ do
     then
         Take_Input
     else
-        Call_Github
+        if [[ $1 && $1 == "git" ]]
+        then
+            Call_Github
+        fi
     fi
 done
