@@ -19,6 +19,7 @@ Call_Github() {
 }
 
 Nums="0 1"
+
 for var in $Nums
 do
     if [ $var -eq 0 ]
