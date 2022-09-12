@@ -62,3 +62,22 @@ ifnull(
 , 0)
 , 2) as accept_rate;
 */
+
+
+-- 1500 
+/*
+select round(
+    ifnull(
+            (
+            select count(distinct requester_id, accepter_id) as cnt
+            from RequestAccepted
+            )
+            /
+            -- division by zero dont throw error in mysql
+            (
+            select count(distinct sender_id, send_to_id) as cnt
+            from FriendRequest
+            )
+    , 0.00)
+, 2) as accept_rate
+*/
