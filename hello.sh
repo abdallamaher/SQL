@@ -10,6 +10,7 @@ Take_Input() {
     read varname
     varname="${varname// /_}".sql
     touch ./$varname
+    echo $varname
     vi ./$varname
 }
 
